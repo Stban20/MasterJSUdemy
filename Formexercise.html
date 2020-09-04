@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Exercise</title>
+    <script src="./js/32_ExerciseDom.js"></script>
+    <style>
+        .divShowBox{
+            width: 200px;
+            height: 250px;
+            float: left;
+            margin: 20px;
+            padding: 5px;
+        }
+        .dashed{
+            border: 2px dashed black;
+        }
+
+    </style>
+</head>
+
+<!-- 
+    1. Form fields: Name, Surname and Age
+    2. Button to sent the formu, event submit
+    3. To Show the info in the page
+-->
+<body>
+    <header>
+        <h1 id="h1Header">DOM Exercise, Events and Functions - JS Course Udemy</h1>
+    </header>
+    
+    <div>
+        <div id="divForm">
+            <form action="" id = "formForm" method="POST" onsubmit="return false">
+                <label for="inputName">Name</label><br>
+                <input type="text" name="inputName" id="inputName" placeholder="Bob" autofocus><br>
+                <label for="iputSurname">Surname</label><br>
+                <input type="text" name="inputSurname" id="inputSurname" placeholder="Sponge"><br>
+                <label for="inputAge">Age</label><br>
+                <input type="number" name="inputAge" id="inputAge" placeholder="15"><br><br>
+                <input type="submit" value="Submit" >
+            </form>
+            <br>
+            <button id="buttonShowInfo">Show info</button>
+        </div>
+        <div id = 'divShowBox' class="divShowBox dashed">
+            <h2>User information</h2>
+            <hr>
+            <p id="pName">Name: <span id="spanName"></span></p>
+            <p id="pSurname">Surname: <span id="spanSurname"></span></p>
+            <p id="pAge">Age: <span id="spanAge"></span></p>
+        </div>
+    </div>
+    
+</body>
+</html>
